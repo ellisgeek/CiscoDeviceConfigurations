@@ -1,0 +1,195 @@
+version 12.1
+no service pad
+service timestamps debug uptime
+service timestamps log uptime
+no service password-encryption
+!
+hostname S1
+!
+enable password class
+!
+ip subnet-zero
+!
+no ip domain-lookup
+!
+spanning-tree mode pvst
+no spanning-tree optimize bpdu transmission
+spanning-tree extend system-id
+!
+!
+!
+!
+interface FastEthernet0/1
+ switchport access vlan 10
+ switchport mode access
+ no shutdown
+!
+interface FastEthernet0/2
+ shutdown
+!
+interface FastEthernet0/3
+ shutdown
+!
+interface FastEthernet0/4
+ shutdown
+!
+interface FastEthernet0/5
+ shutdown
+!
+interface FastEthernet0/6
+ shutdown
+!
+interface FastEthernet0/7
+ shutdown
+!
+interface FastEthernet0/8
+ shutdown
+!
+interface FastEthernet0/9
+ shutdown
+!
+interface FastEthernet0/10
+ shutdown
+!
+interface FastEthernet0/11
+ shutdown
+!
+interface FastEthernet0/12
+ shutdown
+!
+interface FastEthernet0/13
+ shutdown
+!
+interface FastEthernet0/14
+ shutdown
+!
+interface FastEthernet0/15
+ shutdown
+!
+interface FastEthernet0/16
+ shutdown
+!
+interface FastEthernet0/17
+ shutdown
+!
+interface FastEthernet0/18
+ shutdown
+!
+interface FastEthernet0/19
+ shutdown
+!
+interface FastEthernet0/20
+ shutdown
+!
+interface FastEthernet0/21
+ shutdown
+!
+interface FastEthernet0/22
+ shutdown
+!
+interface FastEthernet0/23
+ shutdown
+!
+interface FastEthernet0/24
+ shutdown
+!
+interface FastEthernet0/25
+ shutdown
+!
+interface FastEthernet0/26
+ shutdown
+!
+interface FastEthernet0/27
+ shutdown
+!
+interface FastEthernet0/28
+ shutdown
+!
+interface FastEthernet0/29
+ shutdown
+!
+interface FastEthernet0/30
+ shutdown
+!
+interface FastEthernet0/31
+ shutdown
+!
+interface FastEthernet0/32
+ shutdown
+!
+interface FastEthernet0/33
+ shutdown
+!
+interface FastEthernet0/34
+ shutdown
+!
+interface FastEthernet0/35
+ shutdown
+!
+interface FastEthernet0/36
+ shutdown
+!
+interface FastEthernet0/37
+ shutdown
+!
+interface FastEthernet0/38
+ shutdown
+!
+interface FastEthernet0/39
+ shutdown
+!
+interface FastEthernet0/40
+ shutdown
+!
+interface FastEthernet0/41
+ shutdown
+!
+interface FastEthernet0/42
+ shutdown
+!
+interface FastEthernet0/43
+ shutdown
+!
+interface FastEthernet0/44
+ shutdown
+!
+interface FastEthernet0/45
+ shutdown
+!
+interface FastEthernet0/46
+ shutdown
+!
+interface FastEthernet0/47
+ switchport mode trunk
+ no shutdown
+!
+interface FastEthernet0/48
+ switchport mode trunk
+ no shutdown
+!
+interface GigabitEthernet0/1
+ shutdown
+!
+interface GigabitEthernet0/2
+ shutdown
+!
+interface Vlan1
+ ip address 192.168.1.11 255.255.255.0
+ no ip route-cache
+!
+ip default-gateway 192.168.1.1
+ip http server
+!
+line con 0
+ password cisco
+ logging synchronous
+ login
+line vty 0 4
+ password cisco
+ login
+line vty 5 15
+ password cisco
+ login
+!
+!
+end
